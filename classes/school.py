@@ -14,7 +14,7 @@ class School:
 
     def find_student_by_id(self, student_id):
         for student in self.students:
-            if student.school == student_id:
+            if student.school_id == student_id:
                 return student
             else:
                 return 'Cannot find id'
