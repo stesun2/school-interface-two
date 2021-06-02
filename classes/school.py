@@ -6,3 +6,16 @@ class School:
         self.name = name
         self.staff = Staff.objects()
         self.students = Student.objects()
+    
+
+    def list_students(self):
+        for row in self.students:
+            print(f"{row.name} {row.school_id}")
+
+    def find_student_by_id(self, student_id):
+        for student in self.students:
+            if student.school == student_id:
+                return student
+            else:
+                return 'Cannot find id'
+
