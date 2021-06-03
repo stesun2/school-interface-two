@@ -7,7 +7,6 @@ class School:
         self.staff = Staff.objects()
         self.students = Student.objects()
     
-
     def list_students(self):
         for row in self.students:
             print(f"{row.name} {row.school_id}")

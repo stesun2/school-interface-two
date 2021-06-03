@@ -7,6 +7,12 @@ class Student(Person):
     def __init__(self, name, age, password, role, school_id):
         super().__init__(name, age, password, role)
         self.school_id = school_id
+    
+    def __str__(self):
+        return print(f"{self.name.upper()}\n"
+                        "---------------\n"
+                        f"age: {self.age}\n"
+                        f"id: {self.school_id}\n")
 
     @classmethod
     def objects(cls):
@@ -18,4 +24,5 @@ class Student(Person):
             for row in reader:
                 students.append(Student(**dict(row)))
         return students
+
 
